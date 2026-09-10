@@ -242,3 +242,9 @@ footer {
         max-width: 100%;
     }
 }
+/*===== Latihan 1 - Breakpoint Layar Lebar ===== */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1200px;
+    }
+}
