@@ -98,6 +98,28 @@ Halaman yang sudah ada (Beranda, Daftar/Tambah Buku, Daftar/Tambah Anggota — J
 +--------------------------------------+
 ```
 
+## Wireframe Registrasi Anggota Baru
++--------------------------------------+
+|           SIMPUS-Mini                |
+|--------------------------------------|
+|                                      |
+|       [ Registrasi Anggota Baru ]    |
+|                                      |
+|   Nama Lengkap : [_______________]   |
+|                                      |
+|   Alamat        : [_______________]  |
+|                                      |
+|   No. HP        : [_______________]  |
+|                                      |
+|   Email         : [_______________]  |
+|                                      |
+|            [ Daftar ]                |
+|                                      |
+|      Sudah menjadi anggota?          |
+|             [ Login ]                |
+|                                      |
++--------------------------------------+
+
 ## Konsistensi dengan Desain yang Sudah Berjalan
 - Warna aksen, tipografi navbar, dan gaya tabel/kartu mengikuti `assets/css/style.css` yang sudah dibangun sejak Jobsheet 2-3.
 - Navbar akan ditambah menu **Peminjaman** dan indikator status login (nama petugas / tombol Logout) mulai implementasi di Jobsheet 10.
