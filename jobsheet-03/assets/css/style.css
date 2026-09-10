@@ -21,7 +21,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== Header & Navbar (Flexbox) ===== */
+/* ===== Header & Navbar ===== */
 header {
     background-color: #1d5b8a;
     color: #fff;
@@ -49,7 +49,7 @@ header nav a {
 
 /* ===== Main Layout ===== */
 main {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
@@ -67,10 +67,11 @@ section h2 {
     color: #1d5b8a;
 }
 
-/* ===== Kartu Statistik (CSS Grid) ===== */
+/* ===== Kartu Statistik ===== */
+/* Tampilan awal untuk mobile */
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -99,7 +100,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
@@ -186,62 +188,69 @@ footer {
     overflow-x: auto;
 }
 
-/* ===== Hamburger Menu (checkbox hack) ===== */
+/* ===== Hamburger Menu ===== */
 .nav-toggle {
     display: none;
 }
 
 .nav-toggle-label {
-    display: none;
+    display: block;
     font-size: 1.6rem;
     color: #fff;
     cursor: pointer;
 }
 
-/* ===== Responsive Breakpoints ===== */
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
 
-/* Tablet ke bawah */
-@media (max-width: 900px) {
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+header nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 481px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-/* Mobile */
-@media (max-width: 480px) {
-    header {
-        position: relative;
+
+/* ===== Desktop ===== */
+@media (min-width: 901px) {
+    header nav {
+        display: block;
+        width: auto;
+        order: initial;
+        margin-top: 0;
     }
 
     .nav-toggle-label {
-        display: block;
-    }
-
-    header nav {
         display: none;
-        width: 100%;
-        order: 3;
-        margin-top: 1rem;
-    }
-
-    .nav-toggle:checked ~ nav {
-        display: block;
     }
 
     header nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    main {
+        max-width: 1000px;
     }
 
     main section:nth-of-type(2) {
-        grid-template-columns: 1fr;
-    }
-
-    form input,
-    form select {
-        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-/*===== Latihan 1 - Breakpoint Layar Lebar ===== */
+
+/* ===== Monitor Sangat Lebar ===== */
 @media (min-width: 1400px) {
     main {
         max-width: 1200px;
